@@ -12,6 +12,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.List;
+
+import models.Movie;
 import okhttp3.Headers;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String NOW_PLAY_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed ";
     public static final String TAG = "MainActivity";
+
+    List<Movie> movies;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     JSONArray results = jsonObject.getJSONArray( "results");
                     Log.i(TAG, "results:" + results.toString());
+                    movies = Movie.fromJsonArray(results);
+                    Log.i(TAG, "Movies:" + movies.size());
                 } catch (JSONException e) {
                     Log.e(TAG, "Hit json exception", e);
 
