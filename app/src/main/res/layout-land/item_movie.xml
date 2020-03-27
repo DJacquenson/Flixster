@@ -24,8 +24,11 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="5dp"
         android:layout_toEndOf="@id/ivPoster"
+        android:layout_marginTop="20dp"
+        tools:text="Sonic the Hedgehog"
+        android:textColor="@drawable/abc_vector_test"
         android:textSize="24sp"
-        tools:text="Sonic the Hedgehog" />
+        />
 
     <TextView
         android:id="@+id/tvOverview"
@@ -33,7 +36,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTitle"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
+        android:maxLines="5"
         android:layout_toEndOf="@+id/ivPoster"
-        tools:text="Based on the global blockbuster videogame franchise from Sega, Sonic the Hedgehog tells the story of the world’s speediest hedgehog as he embraces his new home on Earth. In this live-action adventure comedy, Sonic and his new best friend team up to defend the planet from the evil genius Dr. Robotnik and his plans for world domination." />
+        tools:text="Based on the global blockbuster videogame franchise from Sega, Sonic the Hedgehog tells the story of the world’s speediest hedgehog as he embraces his new home on Earth. In this live-action adventure comedy, Sonic and his new best friend team up to defend the planet from the evil genius Dr. Robotnik and his plans for world domination."
+      />
+
 </RelativeLayout>
